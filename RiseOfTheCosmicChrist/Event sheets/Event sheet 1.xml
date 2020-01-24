@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-block sid="889687895822652">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="432469980629697" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="263991488557095">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="489177294630040" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">TilemapVillage_NoSolid</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="723887113100814" type="System">
+                    <param id="0" name="Object to create">DestinationSD</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">round(Mouse.X)</param>
+                    <param id="3" name="Y">round(Mouse.Y)</param>
+                </action>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="339343916732451" type="SilverDuvain">
+                    <param id="0" name="X">round(Mouse.X )</param>
+                    <param id="1" name="Y">round(Mouse.Y )</param>
+                </action>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="751377761099786" type="SilverDuvain" />
+            </actions>
+        </event-block>
+        <event-block sid="144775099937443">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="591777631852315" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>
